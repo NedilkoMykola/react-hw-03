@@ -4,6 +4,7 @@ import {  Form, Field} from 'formik';
 
 export const PhoneForm = styled(Form)`
     display: flex;
+    width: 400px;
     flex-direction: column;
     padding: 20px;
     border: 1px solid black;
@@ -11,7 +12,7 @@ export const PhoneForm = styled(Form)`
 `
 
 export const Input = styled(Field)`
-    width: 300px;
+    max-width: 90%;
     height: 40px;
     margin-bottom: 15px;
     border-radius: 5px;

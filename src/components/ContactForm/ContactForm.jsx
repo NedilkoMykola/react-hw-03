@@ -17,12 +17,14 @@ const ContactForm = ({onSubmit}) => {
       
        
       }}
-      onSubmit={(values)=>onSubmit(values)}
+          onSubmit={(values, action) => {
+            onSubmit(values);
+           action.resetForm();
+      }}
     >
       <PhoneForm>
         <Label htmlFor="firstName">Name</Label>
         <Input id="firstName" name="name"   />
-
         <Label htmlFor="Number">Number</Label>
         <Input id="number" name="number"  />
         <button type="submit">Add contact</button>

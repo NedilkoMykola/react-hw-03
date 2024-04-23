@@ -3,7 +3,7 @@
 
 const SearchBox = ({querry, onSearch}) => {
     
-    const onInput =(e)=>onSearch(e.target.value)
+    const onInput =(e)=>onSearch(e.target.value.trim().toLowerCase())
 
     return (
 
