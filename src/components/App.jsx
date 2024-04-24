@@ -30,32 +30,6 @@ const team1 = [
   { name: "Leo", specialization: "Artist" },]
    
 
-const calculateTeamFinanceReport = (salaries1, team1) => {
-    
-  const sallary = Object.entries(salaries1).map(salary => {
-    const salaryWithTax  = (salary[1].salary + salary[1].salary*(parseInt(salary[1].tax)/100))
-    const sallary = salary[0]; 
-    return [sallary, salaryWithTax]
-  })
-
-  
-
-  console.log(sallary)
-
-  }
-
-
-
-  /* see in console
-{
-   "totalBudgetTeam":4590, // total budget does not match the sum of specializations due to truncation of the fractional part
-   "totalBudgetManager":1111,
-   "totalBudgetDesigner":1714,
-   "totalBudgetArtist":1764,
-}
-*/
-const financeReport1 = calculateTeamFinanceReport(salaries1, team1)
-console.log(JSON.stringify(financeReport1))
 
 function App() {
   const [contacts, setContacts] = useLocalStorage('contacts', initialValues)
