@@ -1,4 +1,7 @@
-import { Contact1 } from "./Contact.styled";
+import { Button, Contact1, ContactInfo, Icon } from "./Contact.styled";
+import { MdPerson } from "react-icons/md";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { RiDeleteBin6Fill } from "react-icons/ri";
 
 
 
@@ -7,11 +10,11 @@ const Contact = ({contact, onDelete}) => {
 
     return (
         <Contact1>
-            <div>
-            <p>{contact.name}</p>
-            <p>{contact.number}</p>
-            </div>
-            <button type="button" onClick={()=>onDelete(contact.id)}>Delete</button>
+            <ContactInfo>
+            <p><Icon><MdPerson/></Icon>{contact.name}</p>
+            <p><Icon><BsFillTelephoneFill/></Icon>{contact.number}</p>
+            </ContactInfo>
+            <Button type="button" onClick={()=>onDelete(contact.id)}><Icon><RiDeleteBin6Fill/></Icon> Delete</Button>
         </Contact1>
     )
 }

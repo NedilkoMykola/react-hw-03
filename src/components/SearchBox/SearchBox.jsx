@@ -1,3 +1,4 @@
+import { Input, Label } from "./SearchBox.styled"
 
 
 
@@ -7,10 +8,10 @@ const SearchBox = ({querry, onSearch}) => {
 
     return (
 
-        <div>
-            <label htmlFor="firstName">Search by name</label>
-        <input id="firstName" name="name" value={querry} onChange={onInput} />
-     </div>
+        <>
+        <Label htmlFor="firstName">Find contacts by name</Label>
+        <Input id="firstName" name="name" value={querry} onChange={onInput} />
+     </>
     )
 }
 

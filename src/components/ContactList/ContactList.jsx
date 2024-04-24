@@ -1,5 +1,5 @@
 import Contact from "../Contact/Contact";
-import { ContactItem } from "./ContactList.styled";
+import { ContactItem, ContactsList } from "./ContactList.styled";
 
 
 
@@ -8,13 +8,13 @@ const ContactList = ({contacts, onDelete}) => {
 
 
     return (
-        <ul>
+        <ContactsList>
             {contacts.map(contact => {
                 return <ContactItem key={contact.id}>
                     <Contact contact={contact} onDelete={onDelete} />
            </ContactItem>
 })}
-        </ul>
+        </ContactsList>
     )
 }
 export default ContactList;
